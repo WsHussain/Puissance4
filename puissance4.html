@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Puissance 4</h1>
+        <div class="game-info">
+            <div class="score">
+                <div id="player1-score">Player 1: 0</div>
+                <div id="player2-score">Player 2: 0</div>
+            </div>
+            <div id="current-player">Current Player: 1</div>
+        </div>
+        <div id="game-container"></div>
+        <div class="controls">
+            <button id="undo-btn">Undo Last Move</button>
+            <button id="reset-btn">New Game</button>
+        </div>
+    </div>
+    <div id="end-game-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="game-result"></h2>
+            <button id="new-game-btn">New Game</button>
+        </div>
+    </div>
+
+    <script src="puissance4.js"></script>
+    <script>
+        const game = new Puissance4('#game-container', {
+            columns: 7,
+            rows: 6,
+            playerColors: ['#FF0000', '#FFFF00']
+        });
+    </script>
+</body>
+</html>
